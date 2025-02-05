@@ -6,7 +6,8 @@ import { useMediaQuery } from '@react-hook/media-query'
 export default function Header() {
     const [showNav, setShowNav] = useState(false);
     const [showCloseIcon, setShowCloseIcon] = useState(false);
-    const isMobile = useMediaQuery('(max-width: 426px)');
+    const isMobile = useMediaQuery('(max-width: 551px)');
+    const isTablet = useMediaQuery('(max-width: 769px)');
 
     let classNameNav;
     switch (showNav) {
@@ -36,17 +37,18 @@ export default function Header() {
                 className={styles.header_logo}
                 src="/assets/shared/logo.svg"
                 alt="logo"
-                width={32}
-                height={32}
+                width={48}
+                height={48}
             />
+            <hr></hr>
             {isMobile && !showCloseIcon &&
                 <Image 
                     onClick={handleShowNav}
                     className={styles.header_btn}
                     src="\assets\shared\icon-hamburger.svg"
                     alt="open navbar"
-                    width={24}
-                    height={20}
+                    width={20}
+                    height={16}
                 />
             }
 
@@ -56,8 +58,8 @@ export default function Header() {
                     className={styles.header_btn}
                     src="\assets\shared\icon-close.svg"
                     alt="close"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                 />
             }
             <nav className={classNameNav}>

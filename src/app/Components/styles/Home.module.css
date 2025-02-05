@@ -1,0 +1,142 @@
+.home {
+    display: flex;
+    padding: 0 120px;
+    padding-top: 200px;
+}
+
+.home_content {
+    width: 50%;
+}
+
+.home_content span {
+    color: var(--clr-light);
+    font-family: var(--ff-sans-cond);
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.home_content h1 {
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+    font-size: 120px;
+    font-weight: 400;
+}
+
+.home_content p {
+    font-size: 18px;
+}
+
+.home_btnEffect {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_btnEffect button {
+    width: 240px;
+    height: 240px;
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+    cursor: pointer;    
+    position: relative;
+    z-index: 5;
+}
+
+.home_btnEffect button::after {
+    content: "";
+    background: hsla(0, 0%, 100%, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.home_btnEffect button:hover::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+@media (max-width: 1025px) {
+    .home {
+        padding-top: 140px;
+    }
+
+    .home_content span {
+        font-size: 30px;
+    }
+
+    .home_content h1 {
+        font-size: 100px;
+    }
+
+    .home_content p {
+        font-size: 16px;
+    }
+
+    .home_btnEffect button {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 769px) {
+    .home {
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .home_content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home_content span {
+        letter-spacing: 4px;
+        font-size: 20px;
+    }
+
+    .home_content h1 {
+        font-size: 80px;
+    }
+
+    .home_btnEffect {
+        width: 100%;
+    }
+}
+
+@media (max-width: 551px) {
+    .home {
+        padding: 60px 40px 0;
+    }
+}
+
+@media (max-width: 426px) {
+    .home_content span {
+        font-size: 16px;
+    }
+
+    .home_content p {
+        font-size: 14px;
+    }
+
+    .home_btnEffect button {
+        width: 210px;
+        height: 210px;
+        font-size: 26px;
+    }
+    
+}

@@ -3,6 +3,7 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .main_home {

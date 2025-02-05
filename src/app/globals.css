@@ -7,7 +7,7 @@
   --clr-light: hsl(231 77% 90%);
   --clr-white: hsl(0 0% 100%);
   
-  --ff-serif: "Bellefair", sans-serif;
+  --ff-serif: "Bellefair", serif;;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
 }
