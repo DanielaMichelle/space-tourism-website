@@ -2,15 +2,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
-import Header from "./Components/Header.js";
-import Home from "./Components/Home.js";
-
+import Header from "./Components/Header.jsx";
+import Home from "./Components/Home.jsx";
+import Destination from "./Components/Destination.jsx";
 
 export default function Main() {
 
   const [views, setViews] = useState({
-    homeView: true,
-    destinationView: false,
+    homeView: false,
+    destinationView: true,
     crewView: false,
     technologyView: false,
   });
@@ -41,7 +41,8 @@ export default function Main() {
   return (
     <main className={classNameMain}>
       <Header />
-      <Home />
+      <Destination />
+      {/* <Home /> */}
     </main>
   );
 }

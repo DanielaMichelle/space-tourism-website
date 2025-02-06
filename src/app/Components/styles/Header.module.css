@@ -51,7 +51,8 @@
     border-bottom: 2px solid hsl(231deg 4.7% 66.95%);
 }
 
-.header_navBar ul li .selected {
+.header_navBar ul li .selected,
+.header_navBar ul li .selected:hover {
     border-bottom: 2px solid var(--clr-light) ;
 }
 
