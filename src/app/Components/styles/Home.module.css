@@ -18,12 +18,7 @@
 .home_content h1 {
     font-family: var(--ff-serif);
     text-transform: uppercase;
-    /* font-size: 120px; */
     font-weight: 400;
-}
-
-.home_content p {
-    /* font-size: 18px; */
 }
 
 .home_btnEffect {
@@ -76,14 +71,6 @@
         font-size: 30px;
     }
 
-    .home_content h1 {
-        /* font-size: 100px; */
-    }
-
-    .home_content p {
-        /* font-size: 16px; */
-    }
-
     .home_btnEffect button {
         width: 220px;
         height: 220px;
@@ -109,10 +96,6 @@
         font-size: 20px;
     }
 
-    .home_content h1 {
-        /* font-size: 80px; */
-    }
-
     .home_btnEffect {
         width: 100%;
     }
@@ -127,10 +110,6 @@
 @media (max-width: 426px) {
     .home_content span {
         font-size: 16px;
-    }
-
-    .home_content p {
-        /* font-size: 14px; */
     }
 
     .home_btnEffect button {

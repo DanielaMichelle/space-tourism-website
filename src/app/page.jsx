@@ -5,13 +5,15 @@ import { useState } from "react";
 import Header from "./Components/Header.jsx";
 import Home from "./Components/Home.jsx";
 import Destination from "./Components/Destination.jsx";
+import Crew from "./Components/Crew.jsx";
+
 
 export default function Main() {
 
   const [views, setViews] = useState({
     homeView: false,
-    destinationView: true,
-    crewView: false,
+    destinationView: false,
+    crewView: true,
     technologyView: false,
   });
 
@@ -41,8 +43,9 @@ export default function Main() {
   return (
     <main className={classNameMain}>
       <Header />
-      <Destination />
       {/* <Home /> */}
+      {/* <Destination /> */}
+      <Crew />
     </main>
   );
 }
