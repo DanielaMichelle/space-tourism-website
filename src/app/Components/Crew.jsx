@@ -23,8 +23,7 @@ export default function Crew() {
                 </div>
                 <div className={styles.crew_img_container}>
                     <Image 
-                        // src="/assets/crew/image-douglas-hurley.webp"
-                        src="/assets/crew/image-victor-glover.webp"
+                        src="/assets/crew/image-douglas-hurley.webp"
                         alt="Douglas Hurley"
                         width={200}
                         height={200}

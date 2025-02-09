@@ -1,7 +1,5 @@
 .crew {
     padding: 40px 120px 0;
-    position: absolute;
-    bottom: 0;
     height: 80%;
 }
 
@@ -76,12 +74,21 @@
 
 .crew_img_container {
     width: 50%;
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .crew_img_container img {
     height: 100%;
     width: fit-content;
+    object-fit: cover;
+    /* position: fixed; */
+    position: static;
+    bottom: 0;
+    height: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+
 }
 
 @media (max-width: 1025px) {
@@ -98,16 +105,8 @@
         width: 60%;
     }
 
-    .crew_img_container {
-        width: 40%;
-        position: relative;
-    } 
-
     .crew_img_container img {
-        height: 94%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        height: 50vw;
     }
 }
 
@@ -116,8 +115,18 @@
         width: 54%;
     }
 
-    .crew_img_container img  {
-        height: 90%;
+    .crew_content {
+        gap: 60px;
+    }
+
+    .crew_img_container  {
+        width: 100%;
+        justify-content: center;        
+    }
+
+    .crew_img_container img {
+        width: 300px;
+        height: fit-content;
     }
 }
 
@@ -129,7 +138,7 @@
     }
 
     .crew h3 {
-        margin: 24px 0;
+        margin: 28px 0;
     }
 
     .crew_content {
@@ -140,7 +149,6 @@
     .crew_content_description {
         width: 100%;
         padding: 0;
-        align-items: center;
     }
 
     .crew_content {
@@ -169,48 +177,53 @@
         margin-top: 36px;
     }
 
-    .crew_img_container {
+    .crew_img_container img {
         position: static;
     }
-
-    .crew_img_container img {
-        height: 60%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-
 }
 
 @media (max-width: 551px) {
+    .crew {
+        padding: 0 20px 40px;
+    }
+
+    .crew h3 {
+        text-align: center;
+    }
 
     .crew_content {
         flex-direction: column-reverse;
-        height: 75%;
+        height: auto;
         gap: 0;
+        gap: 32px;
+        width: 100%;
     }
 
     .crew_content_description {
         flex-direction: column-reverse;
-        gap: 20px;
+        gap: 56px;
     }
 
     .crew_content_description div h2 {
         font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .crew_content_description div > span {
         font-size: 18px;
     }
 
-    .crew_img_container {
-        position: static;
-        width: 100%;
+    .crew_img_container img {
+        width: 240px;
+    } 
+
+    .crew_content_description nav ul {
+        gap: 14px;
     }
 
-    .crew_img_container img {
-        position: static;
-        height: 100%;
-        border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    .crew_content_description nav ul li {
+        width: 14px;
+        height: 14px;
     }
 }

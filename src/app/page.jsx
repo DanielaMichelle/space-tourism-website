@@ -6,6 +6,7 @@ import Header from "./Components/Header.jsx";
 import Home from "./Components/Home.jsx";
 import Destination from "./Components/Destination.jsx";
 import Crew from "./Components/Crew.jsx";
+import Technology from "./Components/Technology";
 
 
 export default function Main() {
@@ -13,8 +14,8 @@ export default function Main() {
   const [views, setViews] = useState({
     homeView: false,
     destinationView: false,
-    crewView: true,
-    technologyView: false,
+    crewView: false,
+    technologyView: true,
   });
 
   // Object.keys(isView) ==>>> ["homeView", "destinationView", "crewView", "technologyView"]
@@ -45,7 +46,8 @@ export default function Main() {
       <Header />
       {/* <Home /> */}
       {/* <Destination /> */}
-      <Crew />
+      {/* <Crew /> */}
+      <Technology />
     </main>
   );
 }
