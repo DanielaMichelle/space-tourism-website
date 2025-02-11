@@ -80,7 +80,7 @@
 @media (max-width: 769px) {
     .home {
         padding-top: 60px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
         flex-direction: column;
         align-items: center;
         gap: 80px;
@@ -103,7 +103,7 @@
 
 @media (max-width: 551px) {
     .home {
-        padding: 60px 40px;
+        padding: 60px 40px 88px;
     }
 }
 
@@ -119,3 +119,20 @@
     }
     
 }
+
+@media (max-width: 321px) {
+    .home {
+        gap: 40px;
+        padding: 60px 40px 60px;
+    }
+
+    .home_content span {
+        font-size: 14px;
+    }
+
+    .home_btnEffect button {
+        width: 180px;
+        height: 180px;
+        font-size: 20px;
+    }
+} 

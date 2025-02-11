@@ -21,7 +21,6 @@
 body {
   font-family: var(--ff-sans-normal);
   color: var(--clr-white);
-  /* font-size: 16px; */
 }
 
 p { 
@@ -84,5 +83,15 @@ h3 {
 
   h3 {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 65px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }
