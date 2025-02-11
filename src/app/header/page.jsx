@@ -69,7 +69,7 @@ export default function Header() {
                     <li><Link href="/" className={`${styles.link} ${styles.selected}`}><b>00</b>Home</Link></li>
                     <li><Link href="/destination/Moon" className={styles.link}><b>01</b>Destination</Link></li>
                     <li><Link href="/crew/DouglasHurley" className={styles.link}><b>02</b>Crew</Link></li>
-                    <li><Link href="/technology" className={styles.link}><b>03</b>Technology</Link></li>
+                    <li><Link href="/technology/Launchvehicle" className={styles.link}><b>03</b>Technology</Link></li>
                 </ul>
             </nav>
         </header>

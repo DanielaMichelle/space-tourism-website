@@ -34,7 +34,7 @@
     gap: 24px;
 }
 
-.tech_description_nav span {
+.tech_description_nav .link {
     color: var(--clr-white);
     background-color: var(--clr-dark);
     border: 1px solid var(--clr-light);
@@ -47,9 +47,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.tech_description_nav span:hover {
+.tech_description_nav .link:hover,
+.tech_description_nav .selected {
     color: var(--clr-dark);
     background-color: var( --clr-white);
     border: 1px solid var(--clr-white);
@@ -181,7 +183,7 @@
         gap: 16px;
     }
 
-    .tech_description_nav span {
+    .tech_description_nav .link {
         width: 48px;
         height: 48px;
         font-size: 16px;
