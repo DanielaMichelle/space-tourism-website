@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import { useState } from 'react';
 import { useMediaQuery } from "@react-hook/media-query"; 
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Header() {
@@ -10,6 +11,7 @@ export default function Header() {
     const [showCloseIcon, setShowCloseIcon] = useState(false);
     const isMobile = useMediaQuery('(max-width: 551px)');
     const isTablet = useMediaQuery('(max-width: 769px)');
+    const pathName = usePathname();
 
     let classNameNav;
     switch (showNav) {
@@ -66,10 +68,10 @@ export default function Header() {
             }
             <nav className={classNameNav}>
                 <ul>
-                    <li><Link href="/" className={`${styles.link} ${styles.selected}`}><b>00</b>Home</Link></li>
-                    <li><Link href="/destination/Moon" className={styles.link}><b>01</b>Destination</Link></li>
-                    <li><Link href="/crew/DouglasHurley" className={styles.link}><b>02</b>Crew</Link></li>
-                    <li><Link href="/technology/Launchvehicle" className={styles.link}><b>03</b>Technology</Link></li>
+                    <li><Link href="/" className={(pathName === "/") ? `${styles.link} ${styles.selected}` : styles.link}><b>00</b>Home</Link></li>
+                    <li><Link href="/destination/Moon" className={(pathName.startsWith("/destination/")) ? `${styles.link} ${styles.selected}` : styles.link}><b>01</b>Destination</Link></li>
+                    <li><Link href="/crew/DouglasHurley" className={(pathName.startsWith("/crew/")) ? `${styles.link} ${styles.selected}` : styles.link}><b>02</b>Crew</Link></li>
+                    <li><Link href="/technology/Launchvehicle" className={(pathName.startsWith("/technology/")) ? `${styles.link} ${styles.selected}` : styles.link}><b>03</b>Technology</Link></li>
                 </ul>
             </nav>
         </header>
