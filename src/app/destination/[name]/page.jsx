@@ -9,9 +9,8 @@ import Link from "next/link";
 
 export default function Destination() {
     const [destinations, setDestinations] = useState(Data.destinations);
-
     const destinationName = useParams().name;
-    let destinationSelected = destinations.find(destination => destination.name === destinationName);
+    const destinationSelected = destinations.find(destination => destination.name === destinationName);
 
     // let destinationSelected;
     // if (localStorage.getItem(destinationName.toString())) {
