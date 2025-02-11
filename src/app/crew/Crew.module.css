@@ -1,0 +1,229 @@
+.crew {
+    padding: 40px 120px 0;
+    height: 80%;
+}
+
+.crew h3 {
+    font-family: var(--ff-sans-cond);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.crew h3 span {
+    color: lch(32 5.79 273.24);
+    font-weight: 800;
+    margin-right: 16px;
+}
+
+.crew_content {
+    display: flex;
+    height: 94%;
+}
+
+.crew_content_description {
+    width: 50%;
+    padding: 120px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crew_content_description nav {
+    margin-top: 80px;
+}
+
+.crew_content_description nav ul {
+    display: flex;
+    gap: 12px;
+}
+
+.crew_content_description nav ul li {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: lch(32 5.79 273.24);
+    cursor: pointer;
+}
+
+.crew_content_description nav ul li:hover {
+    background-color: hsl(220deg 2.52% 53.33%);
+}
+
+.crew_content_description nav ul .selected {
+    background-color: var(--clr-white);
+}
+
+.crew_content_description div > span {
+    text-transform: uppercase;
+    font-family: var(--ff-serif);
+    font-weight: 400;
+    font-size: 28px;
+    color: lch(58 3.48 272.54);
+}
+
+.crew_content_description div h2 {
+    text-transform: uppercase;
+    font-family: var(--ff-serif);
+    font-weight: 400;
+    font-size: 48px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.crew_img_container {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.crew_img_container img {
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+    /* position: fixed; */
+    position: static;
+    bottom: 0;
+    height: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+
+}
+
+@media (max-width: 1025px) {
+    .crew {
+        padding: 40px 80px 0;
+    }
+
+    .crew_content {
+        gap: 20px;
+    }
+
+    .crew_content_description {
+        padding: 80px 0 20px 0;
+        width: 60%;
+    }
+
+    .crew_img_container img {
+        height: 50vw;
+    }
+}
+
+@media (max-width: 960px) {
+    .crew_content_description {
+        width: 54%;
+    }
+
+    .crew_content {
+        gap: 60px;
+    }
+
+    .crew_img_container  {
+        width: 100%;
+        justify-content: center;        
+    }
+
+    .crew_img_container img {
+        width: 300px;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 769px) {
+    .crew {
+        height: 90%;
+        padding: 0 24px 0;
+        width: 100%;
+    }
+
+    .crew h3 {
+        margin: 28px 0;
+    }
+
+    .crew_content {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .crew_content_description {
+        width: 100%;
+        padding: 0;
+    }
+
+    .crew_content {
+        width: 450px;
+        height: 90%;
+    }
+
+    .crew_content_description h2 {
+        font-size: 38px;
+    }
+
+    .crew_content_description div > span {
+        font-size: 24px;
+    }
+
+    .crew_content_description div {
+        text-align: center;
+    }
+
+    .crew_content_description div h2 {
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+
+    .crew_content_description nav {
+        margin-top: 36px;
+    }
+
+    .crew_img_container img {
+        position: static;
+    }
+}
+
+@media (max-width: 551px) {
+    .crew {
+        padding: 0 20px 40px;
+    }
+
+    .crew h3 {
+        text-align: center;
+    }
+
+    .crew_content {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 0;
+        gap: 32px;
+        width: 100%;
+    }
+
+    .crew_content_description {
+        flex-direction: column-reverse;
+        gap: 56px;
+    }
+
+    .crew_content_description div h2 {
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .crew_content_description div > span {
+        font-size: 18px;
+    }
+
+    .crew_img_container img {
+        width: 240px;
+    } 
+
+    .crew_content_description nav ul {
+        gap: 14px;
+    }
+
+    .crew_content_description nav ul li {
+        width: 14px;
+        height: 14px;
+    }
+}

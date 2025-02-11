@@ -2,20 +2,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
-import Header from "./Components/Header.jsx";
-import Home from "./Components/Home.jsx";
-import Destination from "./Components/Destination.jsx";
-import Crew from "./Components/Crew.jsx";
-import Technology from "./Components/Technology";
-
+import Home from "./home/page.jsx";
 
 export default function Main() {
 
   const [views, setViews] = useState({
-    homeView: false,
+    homeView: true,
     destinationView: false,
     crewView: false,
-    technologyView: true,
+    technologyView: false,
   });
 
   // Object.keys(isView) ==>>> ["homeView", "destinationView", "crewView", "technologyView"]
@@ -42,12 +37,6 @@ export default function Main() {
   }
 
   return (
-    <main className={classNameMain}>
-      <Header />
-      {/* <Home /> */}
-      {/* <Destination /> */}
-      {/* <Crew /> */}
-      <Technology />
-    </main>
+    <Home />
   );
 }
